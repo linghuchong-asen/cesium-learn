@@ -10,10 +10,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
     />
-    <title>Hello World 我的第一个cesium应用</title>
+    <title>第一个Entity</title>
     <style>
-      /* 2.引入cesium源码执行pnpm run build 命令；生成的build文件夹下的widgets.css文件 */
-      @import url("./Cesium/Build/CesiumUnminified/Widgets/widgets.css");
+      @import url("../../Cesium/Build/CesiumUnminified/Widgets/widgets.css");
       html,
       body,
       #cesiumContainer {
@@ -26,16 +25,13 @@
     </style>
   </head>
   <body>
-    <!-- 3.创建一个cesium容器 -->
     <div id="cesiumContainer"></div>
-    <!-- 1.引入cesium源码执行pnpm run build 命令；生成的build文件夹下的Cesium.js文件 -->
-    <script src="./Cesium/Build/CesiumUnminified/Cesium.js"></script>
+
+    <script src="../../Cesium/Build/CesiumUnminified/Cesium.js"></script>
     <script>
-      // 4.添加cesium ion token，然后就可以使用cesium ion提供的影像数据,否则没有地球的影像数据
       Cesium.Ion.defaultAccessToken =
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiMTg5OGUwNi05MTEzLTQ0MWMtODMyOC1hYWQ0MmQ4NmQ2ZjgiLCJpZCI6MTA1ODA0LCJpYXQiOjE2Njk3OTk4MTh9.ivfK2hZ04NnfnHQhhKX9vFv-xWlGuCUBAwe_S-Gf-ro";
-      // 5.创建Viewer实例
-      const viewer = new Cesium.Viewer("cesiumContainer", { infoBox: false }); // infoBox使用了Iframe框架，H5新安全机制不允许在其中执行脚本
     </script>
+    <script src="./index.js"></script>
   </body>
 </html>
