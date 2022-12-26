@@ -20,6 +20,8 @@ z: 13380728.04747582 */
 console.log(viewer.scene.camera);
 console.log(viewer.camera);
 
+/* 问题：已知某一矩形范围 [110.2,35.6,112.3,36.7] ，要求相机倾斜25度，实现矩形位置飞行定位。 */
+
 /*  相机倾斜25度，实现矩形位置飞行定位。*/
 const heading = Cesium.Math.toRadians(0.0);
 const pitch = Cesium.Math.toRadians(-25.0);
